@@ -7,24 +7,33 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-  }
+    height: 58px;
+}
   
-  li {
+li {
     float: left;
-  }
-  
-  li a {
+}
+
+li a {
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
-  }
-  
-  li a:hover {
+}
+
+li a:not(:has(img)):hover {
     background-color: rgb(235, 235, 235);
-  }
-  
-  .active {
+}
+
+/* Ensure the active class works correctly */
+.active {
     text-decoration: underline orange;
-  }
+}
+
+li img {
+    height: 24px;
+    width: auto;
+    padding-left: 0px;
+    pointer-events: none;
+}
