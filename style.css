@@ -1,0 +1,39 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(217, 217, 217, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+}
+  
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+
+li a:not(:has(img)):hover {
+    background-color: rgb(235, 235, 235);
+}
+
+/* Ensure the active class works correctly */
+.active {
+    text-decoration: underline orange;
+}
+
+li img {
+    height: 24px;
+    width: auto;
+    padding-left: 0px;
+    pointer-events: none;
+}
