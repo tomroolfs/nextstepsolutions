@@ -26,7 +26,6 @@ li a:not(:has(img)):hover {
     background-color: rgb(235, 235, 235);
 }
 
-/* Ensure the active class works correctly */
 .active {
     text-decoration: underline orange;
 }
@@ -36,9 +35,4 @@ li img {
     width: auto;
     padding-left: 0px;
     pointer-events: none;
-}
-
-.login{
-    margin-right: auto;
-    background-color: red;
 }
