@@ -37,3 +37,8 @@ li img {
     padding-left: 0px;
     pointer-events: none;
 }
+
+.login{
+    margin-right: auto;
+    background-color: red;
+}
