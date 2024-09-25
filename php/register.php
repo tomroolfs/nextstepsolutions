@@ -1,52 +1,34 @@
 <?php
-session_start();
 
+// voeg database connectie toe.
 include 'db.php';
 
+// zet de error meldingen vast.
 $errors = [];
 
+// check of het formulier is verstuurd.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data using $_POST
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
     $email = trim($_POST['email']);
     $phone = trim($_POST['phone']);
-    $birthdate = trim($_POST['birthdate']);
+    $dateofbirth = trim($_POST['dateofbirth']);
 
-    if (empty($username)) {
-        $errors[] = "Username is required";
-    }
-    if (empty($password)) {
-        $errors[] = "Password is required";
-    }
-    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "Valid email address is required";
-    }
-    if (empty($phone) || !preg_match('/^[0-9]{10,15}$/', $phone)) {
-        $errors[] = "Valid phone number is required";
-    }
-    if (empty($birthdate) || !preg_match('/^\d{4}-\d{2}-\d{2}$/', $birthdate)) {
-        $errors[] = "Valid date of birth is required (YYYY-MM-DD)";
+    // has het wachtwoord.
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // zet de gebruiker in de database met SQL.
+    $sql = "INSERT INTO users (username, password, email, phonenumber, dateofbirth) VALUES ('$username', '$hashedPassword', '$email', '$phone', '$dateofbirth')";
+
+    // als de sql word uitgevoerd, word je herleid naar de login pagina om in te loggen.
+    if ($conn->query($sql) === TRUE) {
+        header("Location: ../includes/login.inc.php");
+    } else {
+        // anders krijg je een foutmelding.
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    if (empty($errors)) {
-
-        // Hash the password for security
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-        // Prepare an SQL statement to insert the data into the users table
-        $stmt = $conn->prepare("INSERT INTO users (username, password, email, phone, birthdate) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssss", $username, $hashedPassword, $email, $phone, $birthdate);
-
-        // Execute the statement
-        if ($stmt->execute()) {
-            // Redirect to the login page or display a success message
-            header("Location: login.inc.php");
-            exit;
-        } else {
-            $errors[] = "Error: " . $stmt->error;
-        }
-
-        // Close the statement
-        $stmt->close();
-    }
+    // sluit de database connectie.
+    $conn->close();
 }
