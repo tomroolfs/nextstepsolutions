@@ -50,6 +50,8 @@ if (isset($_SESSION['error_melding'])) {
             <div>
                 <label for="dateofbirth" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
                 <input type="date" id="dateofbirth" name="dateofbirth" required
+                <label for="birthdate" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
+                <input type="date" id="birthdate" name="birthdate" required
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             </div>
             <button type="submit"

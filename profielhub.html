@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiel Pagina</title>
+    <!-- Link naar CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hier komt je HTML inhoud -->
+
+   
+
+    <!-- Profiel Pagina -->
+    <div class="profile-page">
+        <div class="profile-section">
+            <div class="profile-info">
+                <img src="default-profile.png" alt="Profielfoto" class="profile-img" id="profileImg">
+                <button id="uploadPhotoBtn" class="btn">Profielfoto aanpassen</button>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            </div>
+            
+            <div class="profile-details">
+                <h2>Gebruikersnaam hier</h2>
+                <p>Email: example@mail.com</p>
+                <p>Rol: Gebruiker</p>
+                <p>Telefoonnummer: 0612345678</p>
+                <p>Adres: Voorbeeldstraat 123, Stad</p>
+            </div>
+        </div>
+        
+        <div class="edit-description">
+            <h3>Persoonlijke Informatie</h3>
+            <textarea id="descriptionInput" placeholder="Zelf aangemaakte beschrijving"></textarea>
+            <button id="saveDescriptionBtn" class="btn">Beschrijving opslaan</button>
+        </div>
+    </div>
+
+    <!-- Zoek Profiel Pagina -->
+    <div class="search-page">
+        <h2>Profielen</h2>
+        <div class="profiles-grid">
+            <div class="profile-card">
+                <img src="default-profile.png" alt="Profiel Foto" class="profile-img">
+                <p>Naam 1</p>
+            </div>
+            <div class="profile-card">
+                <img src="default-profile.png" alt="Profiel Foto" class="profile-img">
+                <p>Naam 2</p>
+            </div>
+            <!-- Voeg meer profielen toe hier -->
+        </div>
+    </div>
+
+    <!-- Pop-up Profiel Kaart -->
+    <div id="profilePopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <div class="profile-info">
+                <img src="default-profile.png" alt="Profiel Foto" class="profile-img">
+                <h3>Gebruikersnaam hier</h3>
+                <p>Email: example@mail.com</p>
+                <p>Rol: Gebruiker</p>
+                <p>Zelf aangemaakte beschrijving.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

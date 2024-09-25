@@ -1,0 +1,217 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(217, 217, 217, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+}
+  
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+
+li a:not(:has(img)):hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.active {
+    text-decoration: underline orange;
+}
+
+li img {
+    height: 24px;
+    width: auto;
+    padding-left: 0px;
+    pointer-events: none;
+}
+
+
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffff;
+}
+
+.wrapper{
+    width: 420px;
+    background: #d9d9d9;
+    color: #ffff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+}
+
+.wrapper img{
+    max-width: 400px;
+    max-height:100px ;
+    border-radius: 10px;
+   margin-left: 80px;
+    
+}
+
+.blokje{
+    background-color: #AEAEAE;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.text{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #EC830B;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+/* Algemene styling */
+
+/* Profiel pagina */
+.profile-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+
+.profile-details {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.edit-description {
+    width: 50%;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: #f7941d;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #e08500;
+}
+
+/* Zoek profiel pagina */
+.search-page {
+    margin: 20px;
+}
+
+.profiles-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    text-align: center;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.profile-card p {
+    margin-top: 10px;
+}
+
+/* Pop-up profiel kaart */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .profile-page, .edit-description {
+        flex-direction: column;
+        align-items: center;
+    }
+}
