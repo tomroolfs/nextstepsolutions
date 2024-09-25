@@ -7,6 +7,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: includes/login.inc.php");
     exit;
 } else {
+    // zet de variable vast als correct is ingelogd: $loggedin
     $loggedin = $_SESSION['loggedin'];
 }
 ?>
