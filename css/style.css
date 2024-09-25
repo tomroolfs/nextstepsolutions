@@ -1,3 +1,8 @@
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -8,6 +13,7 @@ ul {
     left: 0;
     width: 100%;
     height: 58px;
+
 }
   
 li {
@@ -66,16 +72,9 @@ a {
     align-items: center;
     color: white;
     text-align: center;
-    background-image: url('achtergrond.jpg'); 
-    background-position: center; 
+    background-image: url('../images/achtergrond.jpg'); 
     background-repeat: no-repeat; 
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-    text-align: center;
-    padding: 0 20px;
 }
 
 .hero-content h2 {
@@ -144,7 +143,8 @@ footer {
     background-color: #111;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px; 
+    margin-top: 10%;
 }
 
 footer a {
@@ -340,3 +340,259 @@ textarea {
         align-items: center;
     }
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .innerHeader {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profielPaginaContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    margin: 8% 45px;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  
+  .innerHeader .left {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .innerHeader .left p {
+    background-color: #ec830b;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 0;
+    border-radius: 10px;
+  }
+  
+  .profielFoto {
+    padding: 80px;
+  
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .profielButtons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  
+  .veranderFoto {
+    background-color: #ec830b;
+    color: white;
+  }
+  
+  .verwijderFoto {
+    background-color: #eeeeee;
+    color: #ff0000;
+  }
+  
+  .profielButtons button {
+    margin: 5px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profielGegevensContainer {
+    display: flex;
+    width: 100%;
+    margin: 15px;
+  }
+  
+  .profielGegevensContainer .left {
+    width: 50%;
+  }
+  
+  .profielGegevensContainer .right {
+    width: 50%;
+  }
+  
+  .profielInput input {
+    border: none;
+    background-color: #ec830b;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 12px 0;
+    resize: none;
+    width: 70%;
+    box-sizing: border-box;
+  }
+  
+  .profielInput textarea {
+    border: none;
+    background-color: #ec830b;
+    border-radius: 8px;
+    min-height: 130px;
+  
+    padding: 10px 15px;
+    margin: 12px 0;
+    resize: none;
+    width: 70%;
+    box-sizing: border-box;
+  }
+  
+  .profielInput p {
+    font-weight: 700;
+  }
+  
+  .profielFooter {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  
+  .profielFooter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    color: #bebebe;
+    transition: all 0.3s;
+    cursor: not-allowed;
+  }
+  
+  .profielFooter button .selected {
+    background-color: #ec830b;
+    color: white;
+  }
+  
+  @media screen and (max-width: 771px) {
+    .profielGegevensContainer {
+      flex-direction: column;
+    }
+  
+    .profielInput input {
+      width: 80%;
+    }
+  
+    .profielInput textarea {
+      width: 80%;
+    }
+  
+    .profielGegevensContainer .left {
+      width: 100%;
+    }
+    .profielGegevensContainer .right {
+      width: 100%;
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 80px;
+  }
+  
+  .headerInner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 27px;
+    margin-top: 5%;
+  }
+  
+  @media screen and (max-width: 617px) {
+    .headerInner {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .headerInner .profielTitelBox {
+      margin-bottom: 10px;
+    }
+  
+    .headerInner .zoekProfielBox input {
+      padding: 10px 0;
+    }
+  }
+  
+  .headerInner .profielTitelBox {
+    background-color: #ec830b;
+    border-radius: 5px;
+    padding: 5px 30px;
+  }
+  
+  .headerInner .zoekProfielBox {
+    display: flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding-left: 8px;
+    border-radius: 4px;
+  }
+  
+  .headerInner .zoekProfielBox img {
+    max-width: 20px;
+    position: absolute;
+  }
+  
+  .headerInner .zoekProfielBox input {
+    height: 100%;
+    border: none;
+    margin-left: 27px;
+    margin-right: 10px;
+    outline: none;
+    border-radius: 4px;
+    min-width: 200px;
+    background-color: #d9d9d9;
+  }
+  
+  .profielenLijst {
+    display: flex;
+    background-color: #d9d9d9;
+    width: 100%;
+    margin: 35px 0;
+    border-radius: 8px;
+    padding: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .profiel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 15px;
+  }
+  
+  .profiel p {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ec830b;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+    border-radius: 10px;
+  }
+  
+  .profielenLijst .profielCirkel {
+    background-color: white;
+    padding: 100px;
+    border-radius: 50%;
+  }
+  
