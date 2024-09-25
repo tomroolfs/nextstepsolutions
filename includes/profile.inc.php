@@ -6,7 +6,18 @@ if (!isset($_SESSION['userid'])) {
     header("Location: login.inc.php");
     exit;
 }
+include '../php/db.php';
+
+$userId = $_SESSION['userid'];
+
+$sql = "SELECT username, email, phonenumber, dateofbirth, role, description FROM users WHERE id = $userId";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result = $stmt->get_result();
+$row = $result->fetch_assoc();
+
 ?>  
+
 
 <html lang="en">
   <head>
@@ -33,7 +44,7 @@ if (!isset($_SESSION['userid'])) {
         <div class="left">
           <div class="profielInput">
             <p>Gebruikersnaam:</p>
-            <input />
+            <input value="<?php echo htmlspecialchars($row['username']); ?>"/>
           </div>
           <div class="profielInput">
             <p>Wachtwoord:</p>
