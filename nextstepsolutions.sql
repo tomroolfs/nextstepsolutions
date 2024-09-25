@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 25 sep 2024 om 10:45
+-- Gegenereerd op: 25 sep 2024 om 19:40
 -- Serverversie: 10.4.32-MariaDB
 -- PHP-versie: 8.2.12
 
@@ -34,17 +34,10 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `dateofbirth` date NOT NULL,
   `phonenumber` int(11) NOT NULL,
-  `role` tinyint(1) DEFAULT NULL,
-  `profilepicture` blob DEFAULT NULL,
+  `role` varchar(20) DEFAULT 'Klant',
+  `profilepicture` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Gegevens worden geëxporteerd voor tabel `users`
---
-
-INSERT INTO `users` (`id`, `username`, `password`, `email`, `dateofbirth`, `phonenumber`, `role`, `profilepicture`, `description`) VALUES
-(1, 'user', '$2y$10$di9RIyO1A0P5PSDyWzWLQ.WQ7NhQiqD1qYW/nQsL934An/iI0y.fi', 'user@user.nl', '0000-00-00', 123, NULL, NULL, NULL);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -66,7 +59,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

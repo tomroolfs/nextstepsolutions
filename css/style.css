@@ -379,11 +379,23 @@ textarea {
   }
   
   .profielFoto {
-    padding: 80px;
-  
+    width: 200px;
+    height: 200px;
     background-color: white;
     border-radius: 50%;
-  }
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profielFoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
   
   .profielButtons {
     display: flex;
@@ -461,9 +473,10 @@ textarea {
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
-    color: #bebebe;
+    background-color: #ec830b;
+    color: white;
     transition: all 0.3s;
-    cursor: not-allowed;
+    cursor: pointer;
   }
   
   .profielFooter button .selected {
@@ -594,5 +607,18 @@ textarea {
     background-color: white;
     padding: 100px;
     border-radius: 50%;
+  }
+  
+  .loginbtn{
+    background-color: orange;
+    border-radius: 20px;
+  }
+
+  .loginbtn:hover {
+    background-color: orange;
+  }
+
+  .loginbtn:focus {
+    background-color: orange;
   }
   

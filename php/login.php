@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); // start de sessie om variabels vast te zetten.
 
 //voeg de database toe aan het php bestand
 include 'db.php';
@@ -17,33 +17,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
-    $stmt->store_result();
+    $result = $stmt->get_result();
 
-    if ($stmt->num_rows > 0) {
-        // verbind het resultaat van de ingevoerde gegevens naar variabels.
-        $stmt->bind_result($id, $dbUsername, $hashedPassword);
-        $stmt->fetch();
+    // hier word gecheckt of de gebruiker al bestaat.
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
 
-        // check het wachtwoord en hash het
-        if (password_verify($password, $hashedPassword)) {
-            // zet de session variabels.
-            $_SESSION['userid'] = $id;
-            $_SESSION['username'] = $dbUsername;
-
-            //redirect naar home pagina, gebruikersnaam en wachtwoord zijn correct.
+        // chech het ingevoerde wachtwoord
+        if (password_verify($password, $row['password'])) {
+            // wachtwoord is goed. de sessie voor het userid word nu vast gelegd en de gebruiker word herleid naar de home pagina.
+            $_SESSION['userid'] = $row['id'];
             header("Location: ../includes/home.inc.php");
             exit;
         } else {
-            //foute gebruikersnaam en/of wachtwoord ingevoerd
-            $errors[] = "Incorrect password.";
+            // fout ingevoerde wachtwoord
+            $_SESSION['error_melding'] = "Fout wachtwoord";
             header("Location: ../includes/login.inc.php");
+            exit;
         }
     } else {
-        $errors[] = "User not found.";
+        // gebruiker bestaat niet.
+        $_SESSION['error_melding'] = "Gebruiker bestaat niet";
+        header("Location: ../includes/login.inc.php");
+        exit;
     }
 
-    $stmt->close();
+    $stmt->close(); // sluit de sql statement.
+    $conn->close(); // sluit de database connectie
 }
-
-// sluit de database connectie.
-$conn->close();
