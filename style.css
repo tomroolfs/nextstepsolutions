@@ -37,14 +37,139 @@ li img {
     pointer-events: none;
 }
 
+/* Homepage
 
+/* Algemene stijlen */
 
+h1, h2, h3 {
+    margin: 0;
+    color: #333;
+}
+
+p {
+    color: #555;
+    margin: 10px 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero sectie */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-image: url('achtergrond.jpg'); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #f0a500;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.cta-button:hover {
+    background-color: #e09000;
+}
+
+/* Diensten sectie */
+.diensten-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.diensten-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.dienst {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dienst h3 {
+    margin-bottom: 10px;
+}
+
+.dienst p {
+    color: #666;
+}
+
+/* Over ons sectie */
+.overons-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #f0a500;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e09000;
+}
+
+.homelogo {
+    max-width: 60%;
+    padding-bottom: 150px;
+}
 .body{
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #ffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .wrapper{
