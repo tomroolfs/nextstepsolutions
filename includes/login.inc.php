@@ -21,7 +21,7 @@ if (isset($_SESSION['error_melding'])) {
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <div class="flex justify-center mb-6">
-            <img src="../image.png" alt="Logo" class="w-24 h-24">
+            <img src="../images/image.png" alt="Logo" class="w-24 h-24">
         </div>
         
         <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
