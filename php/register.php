@@ -1,31 +1,34 @@
-<<<<<<< Updated upstream
-=======
 <?php
 
+// voeg database connectie toe.
 include 'db.php';
 
-// Check if the form is submitted
+// zet de error meldingen vast.
+$errors = [];
+
+// check of het formulier is verstuurd.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data using $_POST
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $dateofbirth = $_POST['dateofbirth'];
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+    $email = trim($_POST['email']);
+    $phone = trim($_POST['phone']);
+    $dateofbirth = trim($_POST['dateofbirth']);
 
-    // Hash the password
+    // has het wachtwoord.
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Prepare the SQL query to insert the data
+    // zet de gebruiker in de database met SQL.
     $sql = "INSERT INTO users (username, password, email, phonenumber, dateofbirth) VALUES ('$username', '$hashedPassword', '$email', '$phone', '$dateofbirth')";
 
-    // Execute the query
+    // als de sql word uitgevoerd, word je herleid naar de login pagina om in te loggen.
     if ($conn->query($sql) === TRUE) {
-        echo "Registration successful!";
+        header("Location: ../includes/login.inc.php");
     } else {
+        // anders krijg je een foutmelding.
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
+    // sluit de database connectie.
     $conn->close();
 }
->>>>>>> Stashed changes
