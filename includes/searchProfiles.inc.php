@@ -71,7 +71,7 @@ $userId = $_SESSION['userid'];
 
     <?php
     // Query to get all profiles
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT * FROM users WHERE id != $userId ";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
