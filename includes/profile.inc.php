@@ -16,14 +16,13 @@ $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 
-
+$dateFromDB = "2024-09-25"; // Example date from the database
 
 // Create a DateTime object
 $date = new DateTime($dateFromDB);
 
 // Format it to "DD-MM-YYYY"
 $formattedDate = $date->format('d-m-Y');
-echo $formattedDate; // Output: 25-09-2024
 
 ?>
 
@@ -34,12 +33,11 @@ echo $formattedDate; // Output: 25-09-2024
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Profiel Pagina</title>
 </head>
 
 <body>
-  <?php include 'navbar.inc.php'; ?>
+<?php include 'navbar.inc.php'; ?>
   <div class="profielPaginaContainer">
     <div class="innerHeader">
       <div class="left">
