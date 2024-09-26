@@ -53,11 +53,11 @@ $userId = $_SESSION['userid'];
         <div class="left-section">
           <img id="modalProfileImage" src="" alt="Profile Image" class="profile-image" />
           <p>Email: <span id="modalEmail"></span></p>
-          <p>Phone: <span id="modalPhone"></span></p>
-          <p>Date of Birth: <span id="modalDOB"></span></p>
+          <p>Telefoonnummer: <span id="modalPhone"></span></p>
+          <p>Geboortedatum: <span id="modalDOB"></span></p>
         </div>
         <div class="right-section">
-          <h3 class="font-bold">Personal Bio</h3>
+          <h3 class="font-bold">Persoonlijke bio</h3>
           <p id="modalBio"></p>
         </div>
       </div>
