@@ -58,6 +58,30 @@ if (!isset($_SESSION['userid'])) {
       </div>
     </section>
 
+    <section id="diensten" class="diensten-section">
+      <h2>HBO Open ICT</h2>
+      <div class="diensten-container">
+        <div class="dienst">
+          <h3>Zelf je leerroute bepalen: Flexibel studeren met HBO Open ICT</h3>
+          <p>
+          De HBO-opleiding Open ICT biedt studenten de vrijheid om hun eigen leertraject te bepalen. In plaats van een vast curriculum volg je een gepersonaliseerde leerroute die aansluit bij jouw interesses en carrièreambities. Je hebt de mogelijkheid om te kiezen uit verschillende onderwerpen, zoals softwareontwikkeling, netwerktechnologie, cybersecurity of data-analyse. Deze flexibele aanpak stelt je in staat om jouw vaardigheden op jouw eigen tempo te ontwikkelen, met ondersteuning van docenten en professionals uit het werkveld. Dit maakt Open ICT een ideale keuze voor studenten die hun studie willen afstemmen op hun unieke doelen.          
+          </p>
+        </div>
+        <div class="dienst">
+          <h3>Multidisciplinair en praktijkgericht</h3>
+          <p>
+          HBO Open ICT is ontworpen om je voor te bereiden op de uitdagingen in de dynamische wereld van IT. De opleiding heeft een multidisciplinair karakter, wat betekent dat je kennis maakt met diverse domeinen binnen de ICT, zoals programmeren, cloud computing, netwerkbeheer, en IT-beveiliging. Door de praktijkgerichte aanpak werk je direct aan realistische projecten, vaak in samenwerking met bedrijven uit de regio. Dit zorgt ervoor dat je niet alleen theoretische kennis opdoet, maar ook praktische ervaring opbouwt die direct toepasbaar is in de beroepswereld. Je werkt in teams aan oplossingen voor actuele vraagstukken, wat je leert om creatief en probleemoplossend te denken.
+          </p>
+        </div>
+        <div class="dienst">
+          <h3>Voorbereid op de toekomst</h3>
+          <p>
+          De wereld van IT verandert snel, en de vraag naar goed opgeleide professionals groeit gestaag. HBO Open ICT aan de Hogeschool Utrecht is afgestemd op de laatste ontwikkelingen binnen de IT-sector. Dit betekent dat je als student up-to-date blijft met de nieuwste technologieën en tools die in de praktijk worden gebruikt. De opleiding werkt nauw samen met bedrijven en organisaties, waardoor je tijdens je studie al waardevolle contacten kunt opbouwen in het werkveld. Daarnaast kun je je specialiseren in vakgebieden die gewild zijn op de arbeidsmarkt, zoals cybersecurity, data science en cloud computing, waardoor je goed voorbereid bent op een succesvolle carrière in de IT.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Over ons sectie -->
     <?php include 'footer.inc.php'; ?>
   </body>
