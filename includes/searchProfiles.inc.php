@@ -87,12 +87,12 @@ $userId = $_SESSION['userid'];
 
         profielen.forEach(function (profiel) {
           if (profiel.naam.toUpperCase().includes(zoekTerm)) {
-            container.innerHTML += `
-                        <div class="profiel">
-                            <div class="profielCirkel"></div>
-                            <p>${profiel.naam}</p>
-                        </div>
-                    `;
+           container.innerHTML += `
+                <div class="profiel">
+                    <div class="profielCirkel"><img src="../uploads/${profiel.image}" /></div>
+                    <p>${profiel.naam}</p>
+                </div>
+            `;
             resultatenGevonden = true; // Er is ten minste één resultaat
           }
         });
