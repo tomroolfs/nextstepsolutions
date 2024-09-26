@@ -1,624 +1,633 @@
- body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(217, 217, 217, 1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 58px;
-
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(217, 217, 217, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58px;
 }
-  
+
 li {
-    float: left;
+  float: left;
 }
 
 li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
 }
 
 li a:not(:has(img)):hover {
-    background-color: rgb(235, 235, 235);
+  background-color: rgb(235, 235, 235);
 }
 
 .active {
-    text-decoration: underline orange;
+  text-decoration: underline orange;
 }
 
 li img {
-    height: 24px;
-    width: auto;
-    padding-left: 0px;
-    pointer-events: none;
+  height: 24px;
+  width: auto;
+  padding-left: 0px;
+  pointer-events: none;
 }
 
 /* Homepage
 
 /* Algemene stijlen */
 
-h1, h2, h3 {
-    margin: 0;
-    color: #333;
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: #333;
 }
 
 p {
-    color: #555;
-    margin: 10px 0;
+  color: #555;
+  margin: 10px 0;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 /* Hero sectie */
 .hero {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    background-image: url('../images/achtergrond.jpg'); 
-    background-repeat: no-repeat; 
-    color: white;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-image: url("../images/achtergrond.jpg");
+  background-repeat: no-repeat;
+  color: white;
 }
 
 .hero-content h2 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .hero-content p {
-    font-size: 1.2em;
-    margin: 20px 0;
+  font-size: 1.2em;
+  margin: 20px 0;
 }
 
 .cta-button {
-    padding: 10px 20px;
-    background-color: #f0a500;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
+  padding: 10px 20px;
+  background-color: #f0a500;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .cta-button:hover {
-    background-color: #e09000;
+  background-color: #e09000;
 }
 
 /* Diensten sectie */
 .diensten-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
 }
 
 .diensten-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 .dienst {
-    width: 30%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dienst h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .dienst p {
-    color: #666;
+  color: #666;
 }
 
 /* Over ons sectie */
 .overons-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #333;
-    color: white;
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
 }
 
 /* Footer */
 footer {
-    background-color: #111;
-    color: white;
-    text-align: center;
-    padding: 20px; 
-    margin-top: 10%;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10%;
 }
 
 footer a {
-    color: #f0a500;
-    text-decoration: none;
+  color: #f0a500;
+  text-decoration: none;
 }
 
 footer a:hover {
-    color: #e09000;
+  color: #e09000;
 }
 
 .homelogo {
-    max-width: 60%;
-    padding-bottom: 150px;
+  max-width: 60%;
+  padding-bottom: 150px;
 }
-.body{
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #ffff;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.wrapper{
-    width: 420px;
-    background: #d9d9d9;
-    color: #ffff;
-    border-radius: 10px;
-    padding: 30px 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    
+.body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.wrapper img{
-    max-width: 400px;
-    max-height:100px ;
-    border-radius: 10px;
-   margin-left: 80px;
-    
+.wrapper {
+  width: 420px;
+  background: #d9d9d9;
+  color: #ffff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.blokje{
-    background-color: #AEAEAE;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    padding: 50px;
-    border-radius: 15px;
+.wrapper img {
+  max-width: 400px;
+  max-height: 100px;
+  border-radius: 10px;
+  margin-left: 80px;
 }
 
-.text{
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
+.blokje {
+  background-color: #aeaeae;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 50px;
+  border-radius: 15px;
 }
 
-.wrapper .btn{
-    width: 100%;
-    height: 45px;
-    background: #EC830B;
-    border: none;
-    outline: none;
-    border-radius: 45px;
-    cursor: pointer;
-    font-size: 16px;
-    color: black;
-    font-weight: 500;
+.text {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #ec830b;
+  border: none;
+  outline: none;
+  border-radius: 45px;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
 }
 /* Algemene styling */
 
 /* Profiel pagina */
 .profile-page {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-info {
-    text-align: center;
+  text-align: center;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin-bottom: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-bottom: 10px;
 }
 
 .profile-details {
-    text-align: left;
-    margin-top: 20px;
+  text-align: left;
+  margin-top: 20px;
 }
 
 .edit-description {
-    width: 50%;
+  width: 50%;
 }
 
 textarea {
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
 }
 
 .btn {
-    background-color: #f7941d;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-    margin-top: 10px;
+  background-color: #f7941d;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .btn:hover {
-    background-color: #e08500;
+  background-color: #e08500;
 }
 
 /* Zoek profiel pagina */
 .search-page {
-    margin: 20px;
+  margin: 20px;
 }
 
 .profiles-grid {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .profile-card {
-    text-align: center;
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    width: 120px;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  width: 120px;
 }
 
 .profile-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #ccc;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ccc;
 }
 
 .profile-card p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* Pop-up profiel kaart */
 .popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
 }
 
 .popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  position: relative;
 }
 
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
-    .profile-page, .edit-description {
-        flex-direction: column;
-        align-items: center;
-    }
+  .profile-page,
+  .edit-description {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .innerHeader {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profielPaginaContainer {
-    display: flex;
-    flex-direction: column;
-    background-color: #d9d9d9;
-    margin: 8% 45px;
-    padding: 20px;
-    border-radius: 30px;
-  }
-  
-  .innerHeader .left {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .innerHeader .left p {
-    background-color: #ec830b;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-    padding: 5px 0;
-    border-radius: 10px;
-  }
-  
-  .profielFoto {
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.innerHeader {
+  display: flex;
+  align-items: center;
+}
+
+.profielPaginaContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  margin: 8% 45px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.innerHeader .left {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.innerHeader .left p {
+  background-color: #ec830b;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px 0;
+  border-radius: 10px;
+}
+
+.profielFoto {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profielFoto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-  
-  .profielButtons {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-  }
-  
-  .veranderFoto {
-    background-color: #ec830b;
-    color: white;
-  }
-  
-  .verwijderFoto {
-    background-color: #eeeeee;
-    color: #ff0000;
-  }
-  
-  .profielButtons button {
-    margin: 5px 0;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+.profielButtons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.veranderFoto {
+  background-color: #ec830b;
+  color: white;
+}
+
+.verwijderFoto {
+  background-color: #eeeeee;
+  color: #ff0000;
+}
+
+.profielButtons button {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profielGegevensContainer {
+  display: flex;
+  width: 100%;
+  margin: 15px;
+}
+
+.profielGegevensContainer .left {
+  width: 50%;
+}
+
+.profielGegevensContainer .right {
+  width: 50%;
+}
+
+.profielInput input {
+  border: none;
+  background-color: #ec830b;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 12px 0;
+  resize: none;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.profielInput textarea {
+  border: none;
+  background-color: #ec830b;
+  border-radius: 8px;
+  min-height: 130px;
+
+  padding: 10px 15px;
+  margin: 12px 0;
+  resize: none;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.profielInput p {
+  font-weight: 700;
+}
+
+.profielFooter {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.profielFooter button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ec830b;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.profielFooter button .selected {
+  background-color: #ec830b;
+  color: white;
+}
+
+@media screen and (max-width: 771px) {
   .profielGegevensContainer {
-    display: flex;
-    width: 100%;
-    margin: 15px;
-  }
-  
-  .profielGegevensContainer .left {
-    width: 50%;
-  }
-  
-  .profielGegevensContainer .right {
-    width: 50%;
-  }
-  
-  .profielInput input {
-    border: none;
-    background-color: #ec830b;
-    border-radius: 8px;
-    padding: 10px 15px;
-    margin: 12px 0;
-    resize: none;
-    width: 70%;
-    box-sizing: border-box;
-  }
-  
-  .profielInput textarea {
-    border: none;
-    background-color: #ec830b;
-    border-radius: 8px;
-    min-height: 130px;
-  
-    padding: 10px 15px;
-    margin: 12px 0;
-    resize: none;
-    width: 70%;
-    box-sizing: border-box;
-  }
-  
-  .profielInput p {
-    font-weight: 700;
-  }
-  
-  .profielFooter {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-  }
-  
-  .profielFooter button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    background-color: #ec830b;
-    color: white;
-    transition: all 0.3s;
-    cursor: pointer;
-  }
-  
-  .profielFooter button .selected {
-    background-color: #ec830b;
-    color: white;
-  }
-  
-  @media screen and (max-width: 771px) {
-    .profielGegevensContainer {
-      flex-direction: column;
-    }
-  
-    .profielInput input {
-      width: 80%;
-    }
-  
-    .profielInput textarea {
-      width: 80%;
-    }
-  
-    .profielGegevensContainer .left {
-      width: 100%;
-    }
-    .profielGegevensContainer .right {
-      width: 100%;
-    }
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 50px 80px;
   }
-  
+
+  .profielInput input {
+    width: 80%;
+  }
+
+  .profielInput textarea {
+    width: 80%;
+  }
+
+  .profielGegevensContainer .left {
+    width: 100%;
+  }
+  .profielGegevensContainer .right {
+    width: 100%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 80px;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  font-size: 27px;
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 617px) {
   .headerInner {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    font-size: 27px;
-    margin-top: 5%;
-  }
-  
-  @media screen and (max-width: 617px) {
-    .headerInner {
-      flex-direction: column;
-      justify-content: center;
-    }
-  
-    .headerInner .profielTitelBox {
-      margin-bottom: 10px;
-    }
-  
-    .headerInner .zoekProfielBox input {
-      padding: 10px 0;
-    }
-  }
-  
-  .headerInner .profielTitelBox {
-    background-color: #ec830b;
-    border-radius: 5px;
-    padding: 5px 30px;
-  }
-  
-  .headerInner .zoekProfielBox {
-    display: flex;
-    align-items: center;
-    background-color: #d9d9d9;
-    padding-left: 8px;
-    border-radius: 4px;
-  }
-  
-  .headerInner .zoekProfielBox img {
-    max-width: 20px;
-    position: absolute;
-  }
-  
-  .headerInner .zoekProfielBox input {
-    height: 100%;
-    border: none;
-    margin-left: 27px;
-    margin-right: 10px;
-    outline: none;
-    border-radius: 4px;
-    min-width: 200px;
-    background-color: #d9d9d9;
-  }
-  
-  .profielenLijst {
-    display: flex;
-    background-color: #d9d9d9;
-    width: 100%;
-    margin: 35px 0;
-    border-radius: 8px;
-    padding: 35px;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
   }
-  
-  .profiel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 15px;
-  }
-  
-  .profiel p {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #ec830b;
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 25px;
-    border-radius: 10px;
-  }
-  
-  .profielenLijst .profielCirkel {
-    background-color: white;
-    padding: 100px;
-    border-radius: 50%;
-  }
-  
-  .loginbtn{
-    background-color: orange;
-    border-radius: 20px;
+
+  .headerInner .profielTitelBox {
+    margin-bottom: 10px;
   }
 
-  .loginbtn:hover {
-    background-color: orange;
+  .headerInner .zoekProfielBox input {
+    padding: 10px 0;
   }
+}
 
-  .loginbtn:focus {
-    background-color: orange;
-  }
-  
+.headerInner .profielTitelBox {
+  background-color: #ec830b;
+  border-radius: 5px;
+  padding: 5px 30px;
+}
+
+.headerInner .zoekProfielBox {
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d9;
+  padding-left: 8px;
+  border-radius: 4px;
+}
+
+.headerInner .zoekProfielBox img {
+  max-width: 20px;
+  position: absolute;
+}
+
+.headerInner .zoekProfielBox input {
+  height: 100%;
+  border: none;
+  margin-left: 27px;
+  margin-right: 10px;
+  outline: none;
+  border-radius: 4px;
+  min-width: 200px;
+  background-color: #d9d9d9;
+}
+
+.profielenLijst {
+  display: flex;
+  background-color: #d9d9d9;
+  width: 100%;
+  margin: 35px 0;
+  border-radius: 8px;
+  padding: 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profiel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 15px;
+}
+
+.profiel p {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ec830b;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.profielenLijst .profielCirkel {
+  background-color: white;
+  padding: 100px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profielCirkel img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.loginbtn {
+  background-color: orange;
+  border-radius: 20px;
+}
+
+.loginbtn:hover {
+  background-color: orange;
+}
+
+.loginbtn:focus {
+  background-color: orange;
+}

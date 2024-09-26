@@ -1,3 +1,15 @@
+<?php 
+session_start();
+if (!isset($_SESSION['userid'])) {
+  // Redirect to login page if not logged in
+  header("Location: login.inc.php");
+  exit;
+}
+
+include '../php/db.php';
+$userId = $_SESSION['userid'];
+?>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,12 +41,28 @@
 
     <script>
       const profielen = [
-        { naam: "Alice" },
-        { naam: "Bob" },
-        { naam: "Charlie" },
-        { naam: "David" },
-        { naam: "Eve" },
       ];
+
+      <?php
+      
+       // Query to get all profiles
+      $sql = "SELECT * FROM users";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+          // Output the data into JavaScript
+          
+          while($row = $result->fetch_assoc()) {
+
+                 $profilePicturePath = $row['profilepicture']; // Assuming this field stores the path like 'uploads/thefile.png'
+                echo "profielen.push({ naam: '" . $row['username'] . "', image: '" . $profilePicturePath . "' });\n"; // Store the image path
+
+          }
+      } 
+
+      // Close connection
+      $conn->close();
+      ?>
 
       const container = document.querySelector(".profielenLijst");
       const geenResultatenTekst = document.getElementById("geenResultaten");
@@ -42,7 +70,7 @@
       profielen.forEach(function (profiel) {
         container.innerHTML += `
                 <div class="profiel">
-                    <div class="profielCirkel"></div>
+                    <div class="profielCirkel"><img src="../uploads/${profiel.image}" /></div>
                     <p>${profiel.naam}</p>
                 </div>
             `;

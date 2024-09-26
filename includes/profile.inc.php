@@ -16,7 +16,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 
-$dateFromDB = $row['dateofbirth'];
+
 
 // Create a DateTime object
 $date = new DateTime($dateFromDB);
